@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alex D. Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Header / Hero -->
+  <header style="background-image: url('images/hero-bg.jpg'); background-size: cover; background-position: center;">
+    <div class="hero-text">
+      <h1>Alex D.</h1>
+      <p>Beginner Web Developer | Fun, vibrant & responsive websites</p>
+      <a href="#projects" class="btn">See My Work</a>
+    </div>
+  </header>
+
+  <!-- About Me -->
+  <section id="about">
+    <h2>About Me</h2>
+    <div class="about-content">
+      <img src="images/about-me.jpg" alt="About Me Image" class="about-img">
+      <p>Hello! I’m a motivated beginner web developer learning HTML, CSS, and basic JavaScript. I build clean, responsive, and engaging websites for small projects and practice.</p>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects">
+    <h2>My Work</h2>
+    <div class="project-grid">
+      <div class="project-card">
+        <a href="demo-dessert.html" target="_blank">
+          <img src="images/dessert-demo.jpg" alt="Dessert Shop Demo">
+          <div class="project-info">
+            <h3>Demo Dessert Shop</h3>
+            <p>Fun, colorful, responsive landing page for a dessert business.</p>
+          </div>
+        </a>
+      </div>
+      <div class="project-card">
+        <a href="demo-portfolio.html" target="_blank">
+          <img src="images/portfolio-demo.jpg" alt="Portfolio Landing Page">
+          <div class="project-info">
+            <h3>Portfolio Landing Page</h3>
+            <p>One-page portfolio layout showcasing skills, projects, and contact info.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p>Email: 
+      <a href="mailto:aleksdikellari4@gmail.com?subject=Web%20Project%20Inquiry&body=Hi%20Alex,%0A%0AI%20am%20interested%20in%20your%20web%20development%20services.">
+        aleksdikellari4@gmail.com
+      </a>
+    </p>
+    <p>Feel free to reach out for small web projects or collaboration!</p>
+    <img src="images/contact-icon.jpg" alt="Contact Icon" class="contact-icon">
+  </section>
+
+  <footer>
+    <p>© 2025 Alex D. | Beginner Web Developer</p>
+  </footer>
+
+  <script>
+    // Smooth scrolling for navigation
+    document.querySelectorAll('nav a').forEach(anchor => {
+      anchor.addEventListener('click', function(e){
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+  </script>
+
+</body>
+</html>

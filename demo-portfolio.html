@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Landing Page</title>
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    body {font-family: Arial, sans-serif; margin:0; padding:0;}
+    header {height:80vh; display:flex; justify-content:center; align-items:center; text-align:center; background:linear-gradient(135deg, #89f7fe, #66a6ff);}
+    header h1 {font-size:3rem; color:white;}
+    header p {font-size:1.3rem; color:white; margin-top:15px;}
+    header .btn {display:inline-block; margin-top:25px; padding:12px 25px; background:white; color:#66a6ff; font-weight:bold; border-radius:25px; text-decoration:none; transition:0.3s;}
+    header .btn:hover {transform:scale(1.05);}
+    section {padding:60px 20px; max-width:900px; margin:auto;}
+    section h2 {font-size:2.5rem; color:#66a6ff; text-align:center; margin-bottom:40px;}
+    section p {font-size:1.1rem; color:#555; text-align:center; line-height:1.6;}
+    .projects {display:flex; flex-wrap:wrap; gap:20px; justify-content:center;}
+    .project-card {background:#fff8f0; padding:20px; border-radius:15px; width:250px; box-shadow:0 4px 10px rgba(0,0,0,0.1); transition:0.3s;}
+    .project-card:hover {transform:translateY(-10px); box-shadow:0 8px 20px rgba(0,0,0,0.2);}
+    .project-card img {width:100%; border-radius:10px; margin-bottom:10px;}
+    footer {text-align:center; padding:20px; background:#66a6ff; color:white;}
+    @media(max-width:768px){.projects{flex-direction:column; align-items:center;}}
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="hero-text">
+      <h1>Alex D.</h1>
+      <p>Beginner Web Developer | Simple & Vibrant Websites</p>
+      <a href="#projects" class="btn">See My Work</a>
+    </div>
+  </header>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I’m a beginner web developer passionate about creating clean, responsive, and engaging websites. I focus on usability and fun, vibrant designs.</p>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects">
+      <div class="project-card">
+        <img src="../images/dessert-demo.png" alt="Dessert Shop">
+        <h3>Demo Dessert Shop</h3>
+        <p>Fun, colorful, responsive landing page for a dessert business.</p>
+      </div>
+      <div class="project-card">
+        <img src="../images/portfolio-demo.png" alt="Portfolio Landing Page">
+        <h3>Portfolio Landing Page</h3>
+        <p>One-page portfolio layout showcasing skills, projects, and contact info.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p>Email: alex.d@example.com</p>
+  </section>
+
+  <footer>
+    <p>© 2025 Alex D. | Beginner Web Developer</p>
+  </footer>
+
+</body>
+</html>
