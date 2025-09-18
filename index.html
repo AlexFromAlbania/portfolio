@@ -4,7 +4,113 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Alex D. Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+  <style>
+    /* General Reset */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
+
+    /* Navigation */
+    nav {
+      background: #111;
+      padding: 1rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      gap: 2rem;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav a:hover { color: #f39c12; }
+
+    /* Hero Section */
+    header {
+      height: 90vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
+      background: url('images/hero-bg.jpg') center/cover no-repeat;
+    }
+    .hero-text h1 { font-size: 3rem; margin-bottom: 0.5rem; }
+    .hero-text p { margin-bottom: 1rem; font-size: 1.2rem; }
+    .btn {
+      display: inline-block;
+      padding: 0.7rem 1.5rem;
+      background: #f39c12;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+    .btn:hover { background: #e67e22; }
+
+    /* Section Styling */
+    section { padding: 4rem 2rem; max-width: 1000px; margin: auto; }
+    section h2 { text-align: center; margin-bottom: 2rem; font-size: 2rem; }
+
+    /* About */
+    .about-content {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 2rem;
+      justify-content: center;
+    }
+    .about-img {
+      max-width: 250px;
+      border-radius: 10px;
+    }
+    .about-content p {
+      flex: 1;
+      min-width: 250px;
+    }
+
+    /* Projects */
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+    .project-card {
+      background: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+    .project-card:hover { transform: translateY(-5px); }
+    .project-card img { width: 100%; height: auto; display: block; }
+    .project-info { padding: 1rem; }
+    .project-info h3 { margin-bottom: 0.5rem; }
+
+    /* Contact */
+    #contact { text-align: center; }
+    .contact-icon {
+      width: 60px;
+      margin-top: 1rem;
+      opacity: 0.8;
+    }
+
+    /* Footer */
+    footer {
+      background: #111;
+      color: #aaa;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      margin-top: 2rem;
+    }
+  </style>
 </head>
 <body>
 
@@ -17,21 +123,21 @@
     </ul>
   </nav>
 
-  <!-- Header / Hero -->
-  <header style="background-image: url('images/hero-bg.jpg'); background-size: cover; background-position: center;">
+  <!-- Hero -->
+  <header>
     <div class="hero-text">
       <h1>Alex D.</h1>
-      <p>Beginner Web Developer | Fun, vibrant & responsive websites</p>
+      <p>Beginner Web Developer | Fun, responsive & affordable websites</p>
       <a href="#projects" class="btn">See My Work</a>
     </div>
   </header>
 
-  <!-- About Me -->
+  <!-- About -->
   <section id="about">
     <h2>About Me</h2>
     <div class="about-content">
-      <img src="images/about-me.jpg" alt="About Me Image" class="about-img">
-      <p>Hello! I’m a motivated beginner web developer learning HTML, CSS, and basic JavaScript. I build clean, responsive, and engaging websites for small projects and practice.</p>
+      <img src="images/about-me.jpg" alt="Alex D." class="about-img">
+      <p>Hello! I’m a motivated beginner web developer learning HTML, CSS, and basic JavaScript. I build clean, responsive, and engaging websites — perfect for small businesses and personal projects on a budget.</p>
     </div>
   </section>
 
@@ -43,8 +149,8 @@
         <a href="demo-dessert.html" target="_blank">
           <img src="images/dessert-demo.jpg" alt="Dessert Shop Demo">
           <div class="project-info">
-            <h3>Demo Dessert Shop</h3>
-            <p>Fun, colorful, responsive landing page for a dessert business.</p>
+            <h3>Dessert Shop Demo</h3>
+            <p>A colorful, responsive landing page for a dessert business.</p>
           </div>
         </a>
       </div>
@@ -52,8 +158,8 @@
         <a href="demo-portfolio.html" target="_blank">
           <img src="images/portfolio-demo.jpg" alt="Portfolio Landing Page">
           <div class="project-info">
-            <h3>Portfolio Landing Page</h3>
-            <p>One-page portfolio layout showcasing skills, projects, and contact info.</p>
+            <h3>Portfolio Demo</h3>
+            <p>A clean one-page portfolio layout showcasing skills and projects.</p>
           </div>
         </a>
       </div>
@@ -64,24 +170,26 @@
   <section id="contact">
     <h2>Contact Me</h2>
     <p>Email: 
-      <a href="mailto:aleksdikellari4@gmail.com?subject=Web%20Project%20Inquiry&body=Hi%20Alex,%0A%0AI%20am%20interested%20in%20your%20web%20development%20services.">
+      <a href="mailto:aleksdikellari4@gmail.com?subject=Web%20Project%20Inquiry">
         aleksdikellari4@gmail.com
       </a>
     </p>
-    <p>Feel free to reach out for small web projects or collaboration!</p>
+    <p>Reach out if you need a simple, professional website at a fair price.</p>
     <img src="images/contact-icon.jpg" alt="Contact Icon" class="contact-icon">
   </section>
 
+  <!-- Footer -->
   <footer>
     <p>© 2025 Alex D. | Beginner Web Developer</p>
   </footer>
 
   <script>
-    // Smooth scrolling for navigation
+    // Smooth scrolling
     document.querySelectorAll('nav a').forEach(anchor => {
       anchor.addEventListener('click', function(e){
         e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+        document.querySelector(this.getAttribute('href'))
+          .scrollIntoView({ behavior: 'smooth' });
       });
     });
   </script>
